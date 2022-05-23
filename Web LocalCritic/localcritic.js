@@ -4,8 +4,9 @@ function enviar (){
 
     http.onreadystatechange = function (){
         if (http.readyState==4 && http.status==200){
-          
-            
+          //if (http.responseText==true){ 
+        //localStorage("nombre",document.getElementById("username").value}
+        //    
             
 
         }
