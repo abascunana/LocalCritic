@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <div class="inicio">
+                    <!-- Logo -->
+                    <li><a href="index.html">
+                            <img class="navlogo" src="imagenes/logo3.png">
+                        </a></li>
+                </div>
+                <li><a href="juegos.html">Videojuegos</a></li>
+                <li><a href="pelis.html">Películas</a></li>
+                <li><a href="musica.html">Música</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li class="sesion"><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Juegos -->
+        <form class="insertContainer" action="action_page.php" method="post">
+            <div class="peter">
+                <h1 class="titulologinregister">Insertar Películas</h1>
+            </div>
+
+            <label for="name"><b>Nombre de Película</b></label>
+            <input type="text" placeholder="Película" name="name" required>
+
+            <label for="desc"><b>Sinopsis</b></label>
+            <input type="text" placeholder="Sinopsis" name="sinopsis" required>
+
+            <label for="productora"><b>Productora</b></label>
+            <input type="text" placeholder="Productora" name="productora" required>
+
+            <label for="director"><b>Director</b></label>
+            <input type="text" placeholder="Director" name="director" required>
+
+            <label for="genero"><b>Género</b></label>
+            <input type="text" placeholder="Género" name="genero" required>
+
+            <label for="elenco"><b>Elenco</b></label>
+            <input type="text" placeholder="Elenco" name="elenco" required>
+
+            <label for="anolanz"><b>Año de lanzamiento</b></label>
+            <input type="text" placeholder="Año de lanzamiento" name="anolanz" required>
+
+            <label for="duracion"><b>Duración</b></label>
+            <input type="text" placeholder="Duración" name="duracion" required>
+
+            <button type="submit" class="logregbutton">Insertar</button>
+            <label>            
+            </form>
+
+    </main>
+</body>
+
+</html>
