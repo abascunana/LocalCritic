@@ -20,17 +20,16 @@ import Web.Usuario;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-	public boolean success = false;
+	public int success = 0;
     private Base loginDao;
-
+    public int comprobarsuc() {
+ 			return success;
+ 	    	
+ 	    }
     public void init() {
         loginDao = new Base();
     }
-    
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    	    throws ServletException, IOException {
-    	  System.out.println(comprobarsuc());
-    	    }
+
     	 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
@@ -45,27 +44,23 @@ response.addHeader("Access-Control-Allow-Origin", "*");
             if (loginDao.validate(loginBean)) {
                 //HttpSession session = request.getSession();
                 // session.setAttribute("username",username);
-                success = true;
-                System.out.println(comprobarsuc());
+                success = 1;
+            System.out.println( comprobarsuc()); 
             } else {
                 HttpSession session = request.getSession();
-                //session.setAttribute("user", username);
+                session.setAttribute("user", username);
                 //response.sendRedirect("login.jsp");
-               
-              
-                success = false;
-                System.out.println(comprobarsuc());
+                success = 0;
+                System.out.println( comprobarsuc());      
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        response.getWriter().print(comprobarsuc());
     
     }
 
-	   public boolean comprobarsuc() {
-			return success;
-	    	
-	    }
+	
   
 
 }
