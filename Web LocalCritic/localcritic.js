@@ -32,6 +32,9 @@ function enviar (){
 
 function mostrarus (){
     var x = localStorage.getItem("usernamerg");
-    alert(x) 
+    if(x != null){
+        document.getElementById("nombreusuario").innerHTML=x;
+    }
+  
 
 }
