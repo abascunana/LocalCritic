@@ -1,18 +1,18 @@
 function enviar (){
     var http;
     http = new XMLHttpRequest;
-    var username;
+    var usernamerg;
     http.onreadystatechange = function (){
         if (http.readyState==4 && http.status==200){
             if(http.responseText == 1){
-                alert("usuario correcto")
-                username = document.getElementById("username").value;
-                localStorage.setItem("username", username);
-                alert("bienvenido, "+username)
+                alert("usuario correcto");
+                usernamerg = document.getElementById("username").value;
+                localStorage.setItem("username", usernamerg);
+                alert("bienvenido, "+usernamerg);
                 window.location.href = "index.html";
             }
            else{
-            alert("usuario incorrecto")
+            alert("usuario incorrecto");
            }
         }
     }
@@ -20,7 +20,7 @@ function enviar (){
     http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     http.send("username="+document.getElementById("username").value+"&&password="+document.getElementById("password").value);
    
-    
+    return usernamerg;
   
  
 }
