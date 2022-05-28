@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+</head>
+<body>
+  <script src="myscripts.js"></script> 
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <div class="inicio">
+                    <!-- Logo -->
+                    <li><a href="index.html">
+                            <img class="navlogo" src="imagenes/logo3.png">
+                        </a></li>
+                </div>
+                <li><a href="juegos.html">Videojuegos</a></li>
+                <li><a href="pelis.html">Películas</a></li>
+                <li><a href="musica.html">Música</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <form action="http://localhost:8080/Localcritic/registroPelicula" method="post" >
+        <div class="imgcontainer">
+          <img src="imagenes/user.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Titulo Pelicula</b></label>
+          <input type="text" placeholder="Usuario" name="titulo" required>
+      
+          <label for="psw"><b>Sinopsis</b></label>
+          <input type="text" placeholder="Contraseña" name="sinopsis" required>
+          
+           <label for="psw"><b>Genero</b></label> 
+           <input type="text" placeholder="email" name="genero" required> 
+
+           <label for="psw"><b>Actores</b></label> 
+           <input type="text" placeholder="email" name="actor" required> 
+           
+           <label for="psw"><b>Año de lanzamiento</b></label> 
+           <input type="text" placeholder="email" name="fecha" required> 
+          
+           <label for="psw"><b>Duración</b></label> 
+           <input type="text" placeholder="email" name="duracion" required> 
+
+           <label for="psw">Director<b></b></label> 
+           <input type="text" placeholder="email" name="director" required> 
+
+           <label for="psw">Productora<b></b></label> 
+           <input type="text" placeholder="email" name="productora" required> 
+          <button type="submit">Iniciar sesión</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recuérdame
+          </label>
+
+          <span class="psw">Has olvidado tu <a href="#">contraseña?</a></span>
+        </div>
+      </form> 
+</body>
+</html>
