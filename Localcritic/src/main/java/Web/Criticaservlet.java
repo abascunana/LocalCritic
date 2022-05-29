@@ -1,48 +1,55 @@
 package Web;
+import java.io.IOException;
+import java.sql.SQLException;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.SQLException;
+import jakarta.servlet.http.HttpSession;
 
-
-/**
- * Servlet implementation class Criticaservlet
- */
 @WebServlet("/critica")
-public class Criticaservlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Criticaservlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+public class  Criticaservlet extends HttpServlet {
+	private SqlCritica criticaDao;
+	
+	public void init() {
+		criticaDao = new SqlCritica();
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+		    throws ServletException, IOException {
+		
+		int valCritica = 0;
+		String textoCritica = "";
+		int obraID = 0;
+	
 		try {
-			SqlPelicula.BuscarID(null);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			valCritica = Integer.parseInt(request.getParameter("valCritica"));
+			textoCritica = request.getParameter("textoCritica");
+			obraID = Integer.parseInt(request.getParameter("obraID"));
 		}
-	}
+		catch(Exception e) {
+			   e.printStackTrace();
+			   System.out.println("ahaahahahahhahahahah");
+		}
+		Critica criticaBean = new Critica();
+		criticaBean.setValCritica(valCritica);
+		criticaBean.setTextoCritica(textoCritica);
+		criticaBean.setUsuarioID(1);
+		criticaBean.setObraID(obraID);
+		
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		try {
+		    if (criticaDao.registrarCritica(criticaBean)) {
+		        System.out.println("Bien");
+		           response.sendRedirect("loginsuccess.jsp");
+		            System.out.println("Bien2");
+		    } else {
+		        System.out.println("Mal");
+		        }
+		} catch (IOException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
+    }
 	}
-
-}
