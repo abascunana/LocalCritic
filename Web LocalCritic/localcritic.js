@@ -34,7 +34,14 @@ function mostrarus (){
     var x = localStorage.getItem("usernamerg");
     if(x != null){
         document.getElementById("nombreusuario").innerHTML=x;
+       
+      }
+     if(x == "admin"){
+        document.getElementById("opciones").innerHTML='<li><a href="insertpeliculas.html">Insert</a></li>'  
     }
+  
+  
+}
   
   
 }
