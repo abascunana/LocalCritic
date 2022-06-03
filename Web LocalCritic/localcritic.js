@@ -1,3 +1,11 @@
+function actualitzar(){
+    textoPelis();
+    lista();
+    PredecirResultado()
+}
+
+
+
 function enviar (){
     var http;
     http = new XMLHttpRequest;
