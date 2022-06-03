@@ -104,3 +104,63 @@ function dividirCadena(cadenaADividir,separador) {
        document.write(arrayDeCadenas[i] + " / ");
     }
  }
+ function lista(){
+    var http;
+    http = new XMLHttpRequest;
+    http.onreadystatechange = function (){
+        if (http.readyState==4 && http.status==200){   
+            document.getElementById("lista").innerHTML=http.responseText;
+        }
+    }
+    var lalista = [];
+    var lalista = dividirCadena(document.getElementById("lista").innerText,",");
+    http.open("GET","http://localhost:8080/LocalCritic/lista",true);
+    http.send();
+    return(lalista);
+}
+function PredecirResultado(){
+    const buscarInput = document.getElementById ('llistat');
+    buscarInput.addEventListener('keyup',()=>{
+        opciones = lista();
+        let resultados = [];
+        let input = buscarInput.value;
+        if(input.length){
+            resultados = opciones.filter((item)=>{
+                return item.toLowerCase().includes(input.toLowerCase())
+            });
+            }
+            conseguirResultados(resultados);
+            
+        });
+}
+function conseguirResultados(resultados){
+    const buscarWrapper = document.getElementsByClassName('wrapper'); 
+    var resultadosWrapper = document.getElementById('loco');
+    var aneviar = "";
+    for(let i = 0;i<resultados.length;i++){
+        aneviar = aneviar + "<li>"+resultados[i]+"</li>";
+        if(resultados[0] = ""){
+            aneviar = "";
+            document.getElementById('loco').innerHTML = aneviar
+        }
+    }
+   document.getElementById('loco').innerHTML = aneviar;
+
+    //alert(aneviar);
+    }
+
+    function Criticas(){
+        var http;
+        http = new XMLHttpRequest;
+        var prueba = null;
+        http.onreadystatechange = function (){
+            if (http.readyState==4 && http.status==200){
+                alert(http.responseText);
+                document.getElementById("usuaris").innerHTML=http.responseText;
+            }
+        }
+    
+        http.open("GET","http://localhost:8080/LocalCritic/RecogerCritica",true);
+        prueba = http.responseText;
+        http.send();
+    }
