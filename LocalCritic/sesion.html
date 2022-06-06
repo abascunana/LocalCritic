@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesión</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="Localcritic.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- Barra de navegación -->
+    <nav>
+      <ul class="barraNav">
+        <div class="inicio">
+            <!-- Logo -->
+            <li class="itemNav"><a href="index.html">
+                    <img class="navlogo" src="imagenes/logo3.png">
+                </a></li>
+        </div>
+        <li class="itemNav"><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+        <li class="itemNav"><a href="perfilUsuario.html">Perfil</a></li>
+    </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="SesionBackgroundContainer">
+      <!-- Registro -->
+      <form class="LoginRegisterContainer" method="post">
+        <div class="LoginRegisterOuterContainer">
+
+          <h1 class="tituloLoginRegister">Registrarse</h1>
+
+          <label for="username"><b>Nombre de Usuario</b></label>
+          <input type="text" placeholder="Usuario" id="username1" required>
+
+          <label for="email"><b>Correo electrónico</b></label>
+          <input type="text" placeholder="Correo electrónico" id="email1" required>
+
+          <label for="password"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" id="password1" required>
+          <select id="tipoUsuario1">
+            <option value="Admin">Admin</option>
+            <option value="Usuario">Usuario</option>
+          </select>
+
+          <button type="button" class="logregbutton" onclick="registrar()">Iniciar sesión</button>
+          <label>
+        </div>
+      </form>
+
+      <!-- Inicio de sesión -->
+
+      <form class="LoginRegisterContainer" method="post">
+      
+        <div class="LoginRegisterOuterContainer">
+          <h1 class="tituloLoginRegister">Iniciar Sesión</h1>
+  
+          <label for="username"><b>Nombre de Usuario</b></label>
+          <input type="text" placeholder="Usuario" id="username" required>
+  
+          <label for="password"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" id="password" required>
+  
+          <button type="button" class="logregbutton" onclick="enviar()">Iniciar sesión</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recuérdame
+          </label>
+
+          <span class="psw">¿Has olvidado tu <a class="pswLink" href="#">contraseña</a>?</span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footerContainers">
+      <div class="footerLogoPlusTitle">
+        <img class="footerLogo" src="imagenes/logo1.png">
+        <h1 class="footerTitle">LocalCritic</h1>
+      </div>
+
+      <div class="footerContent">
+        <p>LocalCritic es una página web orientada a la valoración y crítica de obras audiovisuales y
+          literarias, donde se incluyen videojuegos, películas, libros y música.
+          Desde el equipo de administración de LocalCritic os deseamos una agradable estancia.</p>
+
+        <a class="github" href="https://github.com/abascunana/LocalCritic">Haz clic aquí para acceder a nuestro
+          GitHub</a>
+        <p>Página web creada por Antoni Xavier Bascuñana Sánchez, Xavier Borrás Mercant y Miguel Marcos Nazco
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>

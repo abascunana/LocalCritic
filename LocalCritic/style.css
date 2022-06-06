@@ -1,0 +1,2174 @@
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222;
+    min-height: 100vh;
+  }
+
+  .barraNav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+
+  }
+
+  li.itemNav {
+    display: inline-flex;
+    justify-content: center;
+
+  }
+
+  #reglog {
+    display: none;
+  }
+
+  #perfil {
+    display: none;
+  }
+
+  #opciones2 {
+    display: none;
+  }
+
+  li.itemNav a {
+    display: inline;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.6em;
+
+  }
+
+  li.itemNav a#reglog {
+    visibility: hidden;
+  }
+
+
+
+  li.itemNav a#reglog::after {
+    content: 'R';
+    visibility: visible;
+    display: inline-block;
+  }
+
+
+
+
+
+
+
+
+  li {
+    text-decoration: none;
+  }
+
+
+  .input {
+    display: inline-flex;
+    color: white;
+    text-align: left;
+    padding: 0.1em;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li.itemNav a:hover {
+    background-color: #111;
+  }
+
+  .navlogo {
+    width: 40%;
+    margin: 2em;
+  }
+
+  .tituloLoginRegister {
+    margin: auto;
+    text-align: center;
+    padding: 4%;
+  }
+
+
+  .IndexBackgroundColorContainer {
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+    margin-bottom: 1;
+  }
+
+  .SesionBackgroundContainer {
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+    margin-bottom: 1;
+  }
+
+  .backgroundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+  }
+
+
+  .LoginRegisterPC {
+    display: none;
+  }
+
+  /* Bordered form */
+  .LoginRegisterContainer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #b3b3b3;
+    margin: 2em;
+    border-radius: 0.5em;
+  }
+
+  .LoginRegisterOuterContainer {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 10px;
+    padding: 2em;
+  }
+
+
+  /* Full-width inputs */
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: #111;
+    color: #b3b3b3;
+  }
+
+  /* Set a style for all buttons */
+  button.logregbutton {
+    background-color: #d64141;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Add a hover effect for buttons */
+  .logregbutton:hover {
+    opacity: 0.8;
+  }
+
+
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding: 0.5em;
+    color: #b3b3b3;
+  }
+
+  a.pswLink:link {
+    color: lightcoral;
+  }
+
+  a.pswLink:visited {
+    color: lightcoral;
+  }
+
+
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+  /* #tituloportadasMovilID {
+  } */
+
+
+  .tituloportadasMovil {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    background-color: rgb(24, 24, 24);
+    color: #cacaca;
+    font-size: 1.4em;
+    width: 80%;
+
+  }
+
+  #tituloportadasPCID {
+    display: none;
+  }
+
+
+
+  .tituloportadasPC {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    background-color: rgb(24, 24, 24);
+    color: #cacaca;
+    font-size: 1.4em;
+  }
+
+  .tituloInsertObras {
+    display: inline-grid;
+
+    place-content: center;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;  
+
+    color: #cacaca;
+    font-size: 1em;
+  }
+
+  .tituloInsertTiposObras {
+    display: inline-grid;
+    text-decoration: none;
+
+    place-content: center;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #a71616;
+    width: 100%;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.5em;  
+    color: #cacaca;
+    font-size: 1em;
+    font-weight: bold;
+
+  }
+
+
+  .tituloInsertTiposObras a {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    color: #cacaca;
+    text-align: center;
+    padding: 0.8em 0.8em;
+    text-decoration: none;
+
+  }
+
+  .tituloInsertTiposObras:hover{
+    background-color: #801515;
+
+  }
+
+
+  .insertObrasContainer {
+    background-color: rgb(37, 37, 37);
+    margin: 2em auto 2em auto;
+    width: 100%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+
+  .insertObrasInnerContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5em;
+    grid-auto-rows: minmax(10em, auto);
+  
+
+    width: 100%;
+    border-radius: 0.5em;
+    padding-top: 1em;
+  }
+
+
+
+
+
+
+
+
+  .insertContainer {
+    background-color: rgb(37, 37, 37);
+    margin: 2em auto 2em auto;
+    width: 90%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 10px;
+  }
+
+
+
+  /* Portadas */
+  .portada {
+    margin-top: 4em;
+  }
+
+
+  * {
+    box-sizing: border-box
+  }
+
+  /* Container needed to position the overlay. Adjust the width as needed */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+  }
+
+  .containerPortadas {
+    /* border: solid green 1px; */
+    display: inline-block;
+    align-items: center;
+    margin-top: 4%;
+
+    margin-bottom: 2%;
+    background-color: rgb(37, 37, 37);
+    padding: 1.5em;
+    border-radius: 0.8em;
+  }
+
+  /* Portada */
+  .image {
+    display: inline-flex;
+    width: 90%;
+    border-radius: 1em;
+    margin: 0px;
+  }
+
+  /* Efecto overlay */
+  .overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.036), rgb(0, 0, 0));
+    color: #f1f1f1;
+    width: 90%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  /* Hover de la imagen */
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  section.obras {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .search_box input {
+    display: inline-flex;
+    justify-content: center;
+    background-color: #111;
+  }
+
+  .buttonSearch {
+    background-color: #111;
+    color: #b3b3b3;
+  }
+
+
+  footer {
+    position: absolute;
+    margin: 0;
+    margin-top: 3%;
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    overflow: hidden;
+    background-color: rgb(18, 18, 18);
+    color: #b3b3b3;
+  }
+
+  .footerContainers {
+    display: inline-flex;
+  }
+
+  .footerLogoPlusTitle {
+    display: inline-flex;
+  }
+
+  .footerContent {
+    display: inline;
+    float: right;
+    font-size: 0.8em;
+  }
+
+  .footerTitle {
+    display: none;
+  }
+
+  img.footerLogo {
+    display: none;
+  }
+
+  a.github:link {
+    color: lightcoral;
+  }
+
+  a.github:visited {
+    color: lightcoral;
+  }
+
+  a.nose {
+    width: 90%;
+  }
+
+  .resultadosContainer {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 1em 0 1em 0;
+    color: #b3b3b3;
+  }
+
+  .resultadosVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 10%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+
+
+
+  .fichaTecnicaContainer {
+    width: 80%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+  hr.separador {
+    width: 80%;
+    margin: 2em 0 2em 0;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 1em;
+  }
+
+
+  .UpDownContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .InnerUpDownContainer {
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    width: 15%;
+    padding: 0;
+    margin: 0 1em 0 0;
+    justify-content: center;
+
+  }
+
+
+  .upvotes {
+    display: inline-grid;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .downvotes {
+    display: inline-grid;
+    padding: 1em;
+    margin: 0;
+  }
+
+
+
+  .botonUp {
+    background-image: url('imagenes/upvote.png');
+    background-position: center;
+    /* 0px 0px; */
+    background-size: 100%;
+    background-color: #111;
+
+
+
+    height: 100%;
+
+    vertical-align: middle;
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+  }
+
+  .botonDown {
+    background-image: url('imagenes/downvote.png');
+    background-position: center;
+    /* 0px 0px; */
+    background-size: 100%;
+    background-color: #111;
+
+
+    height: 100%;
+
+
+    vertical-align: middle;
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+  }
+
+
+  .botonUp:hover {
+    opacity: 0.6;
+  }
+
+  .botonDown:hover {
+    opacity: 0.6;
+  }
+
+
+  .botonAnadirCritica {
+    color: #ffffff;
+    background-color: #c23b3b;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    font-weight: bold;
+    padding: 1em;
+    margin-top: 1em;
+    align-items: center;
+  }
+
+
+
+
+  .fichaTecnicaContainer {
+    width: 90%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+    margin: 1em 0 1em 0;
+  }
+
+  .fichaTecnicaCriticasContainer {
+    display: inline-flex;
+    justify-content: center;
+    width: 69%;
+    background-color: rgb(37, 37, 37);
+    margin-top: 1em;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+  .fichaTecnicaCriticas {
+    width: 50%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+  }
+
+  .fichaTecnicaCriticar {
+    width: 69%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    background-color: rgb(37, 37, 37);
+
+  }
+
+  .fichaTecnicaCriticar2 {
+    width: 100%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    background-color: rgb(37, 37, 37);
+
+  }
+
+
+  .fichaTecnicaImg {
+    width: 18%;
+    border-radius: 0.5em;
+    margin-right: 1em;
+    border: 0.2em solid #5f5f5f7a;
+  }
+
+  .fichaTecnicaTitle {
+    display: inline-flex;
+    text-align: center;
+    border-radius: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0;
+    font-size: 2em;
+  }
+
+  .fichaTecnicaVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 15%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .fichaTecnicaText {
+    margin: 0.5em;
+    border-radius: 0.2em;
+    padding: 0.1em;
+  }
+
+  .fichaTecnicaCriticas {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  hr.separador {
+    margin: 2em 0 2em 0;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 1em;
+    width: 90%;
+  }
+
+  .criticaContent {
+    width: 90%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+
+
+  .criticaMedia {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+  }
+
+  .separadorSmall {
+    display: inline-flex;
+    margin: 0 0.2em 0 0.2em;
+  }
+
+  .criticaVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 10%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .criticaPrensaName {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .criticaPrensaUsername {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1em;
+  }
+
+  .criticaDate {
+    display: inline-flex;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    font-size: 0.8em;
+    color: #b3b3b37c;
+  }
+
+  h1.criticaTitleMedia {
+    display: inline-flex;
+    text-align: center;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    font-size: 1.5em;
+  }
+
+
+  .backgroundContainerPerfil {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 2em 0;
+    background-color: rgb(50, 50, 50);
+
+  }
+
+  .profilelUpperDiv {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .profileKarmaCritica {
+    display: inline-block;
+    justify-content: cen ter;
+  }
+
+  .profileKarmaNum {
+    display: inline;
+    text-align: center;
+    margin: 0;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    color: rgb(215, 215, 215);
+    background-color: rgb(212, 57, 0);
+  }
+
+  .profileCriticaNum {
+    display: inline;
+    text-align: center;
+    margin: 0.5em;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    padding: 0.2em;
+  }
+
+  /* .profileText {
+  display: inline;
+  margin: 0.5em;
+  border-radius: 0.2em;
+  padding: 0.1em;
+  
+} */
+
+  .profileBio {
+    display: block;
+    margin: 0.5em;
+    margin-top: 1em;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    padding: 1em;
+  }
+
+  .profileMediaVal {
+
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .grid {
+    display: grid;
+    aspect-ratio: 1 / 1;
+    width: 10%;
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .grid>* {
+    aspect-ratio: 1 / 1;
+    /* a square ratio */
+
+    /* center content */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profileContainer {
+    display: inline-flex;
+    width: 90%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+  .profileUserType {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1em;
+  }
+
+  .profileUserTypeInfo {
+    margin-top: 1em;
+  }
+
+  .profileMediaValText {
+    /* display: inline-grid;
+    aspect-ratio: 0;
+    margin: auto;
+    font-size: 0.6em;
+    margin-top: 10%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 0.4em; */
+    display: none;
+
+  }
+
+  .profileCriticas {
+    width: 70%;
+    border: 0.2em solid #5f5f5f7a;
+    background-color: rgb(37, 37, 37);
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    margin-top: 0;
+  }
+
+  .profileCriticaVal {
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    /* a square ratio */
+    margin: auto;
+    font-size: 1.5em;
+    border-radius: 0.2em;
+    padding: 0.4em;
+    padding: 0.5em;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+  }
+
+  .backgroundContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .backgroundColorContainer {
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .perfilTituloCriticasContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 0.7em;
+  }
+
+  .backgroundContainerPerfil {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    background-color: rgb(50, 50, 50);
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+  /*.container {
+
+}*/
+
+  .wrapper {
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    border-radius: 0.4em;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 100%;
+    color: #cacaca;
+  }
+
+  input#llistat {
+    width: 100%;
+    border: none;
+    height: 3em;
+    padding: 0px 40px 0px 10px;
+    font-size: 18px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(20, 20, 20);
+    color: #cacaca;
+
+
+
+  }
+
+  .searchImg {
+    display: inline-flex;
+    width: 70%;
+  }
+
+  button.botonSearch {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 0.2em solid #414141;
+    background: none;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 50px;
+    padding: 0;
+    width: 4em;
+    color: #cacaca;
+
+  }
+
+  .botonSearch:hover {
+    background-color: rgb(49, 49, 49);
+  }
+
+  button.botonSearch i {
+    width: 100%;
+    color: #6d7b98;
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .results {
+    padding: 0px;
+  }
+
+  .resultados ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .resultados ul li {
+    list-style: none;
+    border-radius: 3px;
+    opacity: 0;
+    padding: 8px 12px;
+    transition: all .5s linear;
+  }
+
+
+  .show .resultados ul li {
+    opacity: 1;
+    display: block;
+  }
+
+  .show .resultados {
+    padding: 10px;
+  }
+
+  .resultados ul li:hover {
+    background-color: rgb(20, 20, 20);
+  }
+
+  .floatAboveEverything {
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    background-color: rgb(29, 29, 29);
+    border: #111;
+    color: #cacaca;
+  }
+
+  .padreada {
+    display: grid;
+    justify-items: center;
+  }
+
+  .padreada2 {
+    margin: 6em 0 6em 0;
+    display: block;
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  .SearchBar {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 3%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .loco {
+    background-color: #6d7b98;
+  }
+
+
+  /* 
+.scoreContainer {
+  display: inline-block;
+  
+}
+.scoreBox {
+  border-radius: 0.2em;
+  padding: 0.5em;
+  color: #ffffff;
+  background-color: rgb(0, 181, 0);
+} */
+
+
+  .score-board {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .player {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  .player h4 {
+    font-weight: bold;
+  }
+
+  .score-box {
+    border: 3px solid black;
+    padding: 30px;
+    color: #2CB3C9;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+
+
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222;
+    min-height: 100vh;
+  }
+
+  .barraNav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+
+  }
+
+  li.itemNav {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+    margin: 0;
+
+  }
+
+  li.itemNav a {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 0.8em 0.8em;
+
+    text-decoration: none;
+
+  }
+
+
+  li {
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li.itemNav a:hover {
+    background-color: #111;
+  }
+
+  .navlogo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    text-align: center;
+  }
+
+  .peter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tituloLoginRegister {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgb(27, 27, 27);
+    width: 60%;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.5em;  
+    color: #cacaca;
+  }
+
+  .IndexBackgroundColorContainer {
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .SesionBackgroundContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+  }
+
+  .backgroundColorContainer {
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  .backgroundContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+  }
+
+  .LoginRegisterMovil {
+    display: none;
+  }
+
+  /* Bordered form */
+  .LoginRegisterContainer {
+    display: inline-flex;
+    justify-content: center;
+    color: #b3b3b3;
+    width: 80%;
+    margin: 2em;
+    border-radius: 0.5em;
+  }
+
+  .LoginRegisterOuterContainer {
+    display: inline-block;
+    justify-content: center;
+    background-color: rgb(37, 37, 37);
+    width: 80%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 10px;
+    padding: 2em;
+  }
+
+
+  /* Full-width inputs */
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: #111;
+    color: #b3b3b3;
+  }
+
+  /* Set a style for all buttons */
+  button.logregbutton {
+    background-color: #d64141;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Add a hover effect for buttons */
+  .logregbutton:hover {
+    opacity: 0.8;
+  }
+
+
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding: 0.5em;
+    color: #b3b3b3;
+  }
+
+  a.pswLink:link {
+    color: lightcoral;
+  }
+
+  a.pswLink:visited {
+    color: lightcoral;
+  }
+
+
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+
+  .tituloInsertObras {
+    display: inline-grid;
+
+    place-content: center;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;  
+
+    color: #cacaca;
+    font-size: 1.5em;
+  }
+
+  .tituloInsertTiposObras {
+    display: inline-grid;
+    text-decoration: none;
+
+    place-content: center;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #a71616;
+    width: 100%;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;  
+    color: #cacaca;
+    font-size: 3em;
+    font-weight: bold;
+
+  }
+
+
+  .tituloInsertTiposObras a {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    color: #cacaca;
+    text-align: center;
+    padding: 0.8em 0.8em;
+    text-decoration: none;
+
+  }
+
+  .tituloInsertTiposObras:hover{
+    background-color: #801515;
+
+  }
+
+
+  .insertObrasContainer {
+    background-color: rgb(37, 37, 37);
+    margin: 2em auto 2em auto;
+    width: 80%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+
+  .insertObrasInnerContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5em;
+    grid-auto-rows: minmax(10em, auto);
+  
+
+    width: 100%;
+    border-radius: 0.5em;
+    padding-top: 1em;
+  }
+
+
+
+  
+
+  .insertContainer {
+    background-color: rgb(37, 37, 37);
+    margin: 2em auto 2em auto;
+    width: 60%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+
+  #tituloportadasMovilID {
+    display: none;
+  }
+
+
+  .tituloportadasPC {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    background-color: rgb(24, 24, 24);
+    color: #cacaca;
+    font-size: 1.4em;
+  }
+
+
+  /* Portadas */
+  .portada {
+    margin-top: 4em;
+  }
+
+
+  * {
+    box-sizing: border-box
+  }
+
+  /* Container needed to position the overlay. Adjust the width as needed */
+  .container {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: auto;
+    max-width: 18.75em;
+    /* 300px */
+    /* border: solid green 1px; */
+  }
+
+  div.containerPortadas {
+    /* border: solid green 1px; */
+    display: inline-flex;
+    justify-content: center;
+    background-color: rgb(37, 37, 37);
+    padding: 1.5em;
+    border-radius: 0.8em;
+  }
+
+  /* Portada */
+  .image {
+    display: inline-block;
+    width: 90%;
+    border-radius: 1em;
+    margin: 0px;
+  }
+
+  /* Efecto overlay */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.036), rgb(0, 0, 0));
+    color: #f1f1f1;
+    width: 90%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  /* Hover de la imagen */
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  section.obras {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .search_box input {
+    display: inline-flex;
+    justify-content: center;
+    background-color: #111;
+  }
+
+  .buttonSearch {
+    background-color: #111;
+    color: #b3b3b3;
+  }
+
+
+  footer {
+    position: absolute;
+    margin: 0;
+    margin-top: 3%;
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    overflow: hidden;
+    background-color: rgb(18, 18, 18);
+    color: #b3b3b3;
+  }
+
+  .footerContainers {
+    display: inline-flex;
+  }
+
+  .footerLogoPlusTitle {
+    display: inline-flex;
+  }
+
+  .footerContent {
+    display: inline;
+    float: right;
+    font-size: 0.8em;
+
+  }
+
+  .footerTitle {
+    font-size: 3em;
+    margin-right: 1em;
+  }
+
+  img.footerLogo {
+    margin-right: 2em;
+    width: 30%;
+    height: auto;
+  }
+
+  a.github:link {
+    color: lightcoral;
+  }
+
+  a.github:visited {
+    color: lightcoral;
+  }
+
+  a.nose {
+    width: 90%;
+  }
+
+  .resultadosContainer {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 1em 0 1em 0;
+    color: #b3b3b3;
+  }
+
+  .resultadosVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 4%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .fichaTecnicaContainer {
+    width: 80%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+    margin: 1em 0 1em 0;
+  }
+
+  .fichaTecnicaCriticasContainer {
+    display: inline-flex;
+    justify-content: center;
+    width: 69%;
+    background-color: rgb(37, 37, 37);
+    margin-top: 1em;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+  .fichaTecnicaCriticas {
+    width: 50%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+  }
+
+  .fichaTecnicaCriticar {
+    width: 69%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    background-color: rgb(37, 37, 37);
+
+  }
+
+  .fichaTecnicaCriticar2 {
+    width: 100%;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    background-color: rgb(37, 37, 37);
+
+  }
+
+  .criticaContent {
+    width: 80%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+
+  .fichaTecnicaImg {
+    width: 18%;
+    border-radius: 0.5em;
+    margin-right: 1em;
+    border: 0.2em solid #5f5f5f7a;
+  }
+
+  .fichaTecnicaTitle {
+    display: inline-flex;
+    text-align: center;
+    border-radius: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0;
+    font-size: 2em;
+  }
+
+  .fichaTecnicaVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 5%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .fichaTecnicaText {
+    margin: 0.5em;
+    border-radius: 0.2em;
+    padding: 0.1em;
+  }
+
+  .fichaTecnicaCriticas {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  hr.separador {
+    width: 80%;
+    margin: 2em 0 2em 0;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 1em;
+  }
+
+
+  .UpDownContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .InnerUpDownContainer {
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    width: 3%;
+    padding: 0;
+    margin: 0 1em 0 0;
+    justify-content: center;
+
+  }
+
+
+  .upvotes {
+    display: inline-grid;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .downvotes {
+    display: inline-grid;
+    padding: 1em;
+    margin: 0;
+  }
+
+
+  .botonUp {
+    background-image: url('imagenes/upvote.png');
+    background-position: center;
+    /* 0px 0px; */
+    background-size: 100%;
+    background-color: #111;
+
+
+
+    width: 100%;
+    height: 100%;
+
+    vertical-align: middle;
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+  }
+
+  .botonDown {
+    background-image: url('imagenes/downvote.png');
+    background-position: center;
+    /* 0px 0px; */
+    background-size: 100%;
+    background-color: #111;
+
+
+    width: 100%;
+    height: 100%;
+
+
+    vertical-align: middle;
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+  }
+
+
+  .botonUp:hover {
+    opacity: 0.6;
+  }
+
+  .botonDown:hover {
+    opacity: 0.6;
+  }
+
+
+  .botonAnadirCritica {
+    color: #ffffff;
+    background-color: #c23b3b;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    font-weight: bold;
+    padding: 1em;
+    margin-top: 1em;
+  }
+
+  .criticaMedia {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 1.5em;
+  }
+
+  .separadorSmall {
+    display: inline-flex;
+    margin: 0 0.2em 0 0.2em;
+  }
+
+  .criticaVal {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    width: 10%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 1.5em;
+  }
+
+  .criticaPrensaName {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .criticaPrensaUsername {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1em;
+  }
+
+  .criticaDate {
+    display: inline-flex;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    font-size: 0.8em;
+    color: #b3b3b37c;
+  }
+
+  h1.criticaTitleMedia {
+    display: inline-flex;
+    text-align: center;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    font-size: 1.5em;
+  }
+
+  .profilelUpperDiv {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .profileKarmaCritica {
+    display: inline-block;
+    justify-content: cen ter;
+  }
+
+  .profileKarmaNum {
+    display: inline;
+    text-align: center;
+    margin: 0;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    color: rgb(215, 215, 215);
+    background-color: rgb(212, 57, 0);
+  }
+
+  .profileCriticaNum {
+    display: inline;
+    text-align: center;
+    margin: 0.5em;
+    border: 0.1em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    padding: 0.2em;
+  }
+
+  /* .profileText {
+  display: inline;
+  margin: 0.5em;
+  border-radius: 0.2em;
+  padding: 0.1em;
+  
+} */
+
+  .profileBio {
+    display: block;
+    margin: 0.5em;
+    margin-top: 1em;
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.2em;
+    padding: 1em;
+  }
+
+  .profileMediaVal {
+    max-width: 80%;
+    display: inline-flex;
+    aspect-ratio: 1 / 1;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+    font-size: 2em;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .grid {
+    display: grid;
+    aspect-ratio: 1 / 1;
+    width: 10%;
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .grid>* {
+    aspect-ratio: 1 / 1;
+    /* a square ratio */
+
+    /* center content */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profileContainer {
+    width: 70%;
+    background-color: rgb(37, 37, 37);
+    border: 0.2em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 1.3em;
+    color: #b3b3b3;
+  }
+
+  .profileUserType {
+    display: inline-flex;
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1em;
+  }
+
+  .profileUserTypeInfo {
+    margin-top: 1em;
+  }
+
+  .profileMediaValText {
+    display: inline-grid;
+    aspect-ratio: 0;
+    /* a square ratio */
+    margin: auto;
+    font-size: 0.6em;
+    margin-top: 10%;
+    border: 0.3em solid #5f5f5f7a;
+    border-radius: 0.5em;
+    padding: 0.4em;
+  }
+
+  .profileCriticas {
+    width: 70%;
+    border: 0.2em solid #5f5f5f7a;
+    background-color: rgb(37, 37, 37);
+    border-radius: 0.5em;
+    padding: 1.3em;
+    margin: 0.5em;
+    color: #b3b3b3;
+    margin-top: 0;
+  }
+
+  .profileCriticaVal {
+    display: inline-grid;
+    aspect-ratio: 1 / 1;
+    /* a square ratio */
+    margin: auto;
+    font-size: 1.5em;
+    border-radius: 0.2em;
+    padding: 0.4em;
+    padding: 0.5em;
+    color: #ffffff;
+    background-color: rgb(0, 181, 0);
+  }
+
+
+
+  .botonCritica {
+    width: 100%;
+  }
+
+
+
+
+  .perfilTituloCriticasContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    padding: 0.7em;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    border-radius: 0.4em;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 100%;
+    color: #cacaca;
+  }
+
+  input#llistat {
+    width: 100%;
+    border: none;
+    height: 3em;
+    border-radius: 0.4em;
+    padding: 0px 40px 0px 10px;
+    font-size: 18px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(20, 20, 20);
+    color: #cacaca;
+
+
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+
+  .searchImg {
+    display: inline-flex;
+    width: 70%;
+  }
+
+  button.botonSearch {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 0.2em solid #414141;
+    background: none;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 50px;
+    padding: 0;
+    width: 4em;
+    color: #cacaca;
+
+  }
+
+  .botonSearch:hover {
+    background-color: rgb(49, 49, 49);
+  }
+
+  button.botonSearch i {
+    width: 100%;
+    color: #6d7b98;
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .results {
+    padding: 0px;
+  }
+
+  .resultados ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .resultados ul li {
+    list-style: none;
+    border-radius: 3px;
+    opacity: 0;
+    padding: 8px 12px;
+    transition: all .5s linear;
+  }
+
+
+  .show .resultados ul li {
+    opacity: 1;
+    display: block;
+  }
+
+  .show .resultados {
+    padding: 10px;
+  }
+
+  .resultados ul li:hover {
+    background-color: rgb(20, 20, 20);
+  }
+
+  .floatAboveEverything {
+    width: 20%;
+    z-index: 1000;
+    position: absolute;
+    background-color: rgb(29, 29, 29);
+    border: #111;
+    color: #cacaca;
+
+    margin-right: 1.5%;
+  }
+
+  .padreada {
+    display: grid;
+    justify-items: center;
+  }
+
+  .SearchBar {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 3%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .loco {
+    background-color: #6d7b98;
+  }
+
+
+  /* 
+.scoreContainer {
+  display: inline-block;
+  
+}
+.scoreBox {
+  border-radius: 0.2em;
+  padding: 0.5em;
+  color: #ffffff;
+  background-color: rgb(0, 181, 0);
+} */
+
+
+  .score-board {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .player {
+    display: inline-block;
+    padding: 15px;
+  }
+
+  .player h4 {
+    font-weight: bold;
+  }
+
+  .score-box {
+    border: 3px solid black;
+    padding: 30px;
+    color: #2CB3C9;
+  }
+  #lista{
+    display: none;
+  }
+
+}

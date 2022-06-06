@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <link rel="stylesheet" href="Localcritic.js">
+</head>
+<body>
+  <header>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul class="barraNav" id="opciones">
+            <li id="opciones2"></li>
+            <div class="inicio">
+                <!-- Logo -->
+                <li class="itemNav"><a href="index.html">
+                        <img class="navlogo" src="imagenes/logo3.png">
+                    </a></li>
+            </div>
+            <li class="itemNav" id="opciones3"></li>
+            <li class="itemNav"><a href="juegos.html">Videojuegos</a></li>
+            <li class="itemNav"><a href="critica.html">Películas</a></li>
+            <li class="itemNav"><a href="musica.html">Música</a></li>
+            <li class="itemNav"><a href="libros.html">Libros</a></li>
+            <li class="itemNav"><a href="session.html">Registrarse o Iniciar sesión</a></li>
+            <li class="itemNav"><a href="probando.html">Perfil</a></li>
+            <li class="itemNav"id="opciones2"></li>
+
+        </ul>
+        <div class="SearchBar">
+            <div id="selector" class="floatAboveEverything">
+                <div class="listaResultados">
+                    <div id="wrapper" class="wrapper"></div>
+                    <ul id="loco">
+                        <!-- <div class="resultados" id="resultados">   -->
+                    </ul>
+                </div>
+                <!--</div>-->
+            </div>
+        </div>
+    </nav>
+</header>
+    <form action="http://localhost:8080/LocalCritic/registroUsuario" method="post" >
+        <div class="imgcontainer">
+          <img src="imagenes/user.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Nombre de Usuario</b></label>
+          <input type="text" placeholder="Usuario" name="username" required>
+      
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" name="password" required>
+          
+          
+           <label for="psw"><b>Email</b></label> 
+           <input type="email" placeholder="email" name="email" required> 
+          
+          
+          <button type="submit">Iniciar sesión</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recuérdame
+          </label>
+
+          <span class="psw">Has olvidado tu <a href="#">contraseña?</a></span>
+        </div>
+      </form> 
+</body>
+</html>
+</html>

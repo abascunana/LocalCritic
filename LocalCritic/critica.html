@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <script src="Localcritic.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload= tituloyusuario()>
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul class="barraNav">
+                <div class="inicio">
+                    <!-- Logo -->
+                    <li class="itemNav"><a href="index.html">
+                            <img class="navlogo" src="imagenes/logo3.png">
+                        </a></li>
+                </div>
+                <li class="itemNav" id="opciones3"></li>
+                <li class="itemNav" id="registro"><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+                <li class="itemNav" id="perfil"><a href="perfilUsuario.html">Perfil</a></li>
+                <li class="itemNav"id="opciones2"></li>
+            </ul>
+            
+            <div class="SearchBar">
+                <div id="selector" class="floatAboveEverything">
+                    <div class="listaResultados">
+                        <div id="wrapper" class="wrapper"></div>
+                        <ul id="loco">
+                            <!-- <div class="resultados" id="resultados">   -->
+                        </ul>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+  <main>
+    <div class = "ContainerRegisterLogin">
+    <!-- Inicio de sesión -->
+
+    <form class="login"  method="post">
+
+      <div class="insertContainer">
+        <h1 class="titulologinregister">Critica</h1>
+
+        <label for="valCritica"><b>Nota</b></label>
+        <input type="text" placeholder="valCritica" name="valCritica"  id="valCritica" required>
+
+        <label for="textoCritica"><b>Critica</b></label>
+        <input type="text" placeholder="textoCritica" name="textoCritica" id="textoCritica"required>
+
+        
+        <label id ="titulo1" ><b>ObraID</b></label>
+        
+        <label id="nombreusuario1"><b>Usuario</b></label>
+
+
+        <button type="button" class="logregbutton" onclick="Critica()">Publicar Crítica</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Recuérdame
+        </label>
+
+        <span class="psw">Has olvidado tu <a href="#">contraseña?</a></span>
+      </div>
+    </form>
+    </div>
+    <footer>
+        <div class="footerContainers">
+            <div class="footerLogoPlusTitle">
+                <img class="footerLogo" src="imagenes/logo1.png">
+                <h1 class="footerTitle">LocalCritic</h1>
+            </div>
+
+            <div class="footerContent">
+                <p>LocalCritic es una página web orientada a la valoración y crítica de obras audiovisuales y
+                    literarias, donde se incluyen videojuegos, películas, libros y música.
+                    Desde el equipo de administración de LocalCritic os deseamos una agradable estancia.</p>
+
+                <a class="github" href="https://github.com/abascunana/LocalCritic">Haz clic aquí para acceder a nuestro
+                    GitHub</a>
+                <p>Página web creada por Antoni Xavier Bascuñana Sánchez, Xavier Borrás Mercant y Miguel Marcos Nazco
+                </p>
+            </div>
+        </div>
+    </footer>
+  </main>
+</body>
+</html>
+</html>

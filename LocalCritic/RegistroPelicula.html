@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script src="Localcritic.js"></script> 
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+          <ul class="barraNav">
+            <div class="inicio">
+                <!-- Logo -->
+                <li class="itemNav"><a href="index.html">
+                        <img class="navlogo" src="imagenes/logo3.png">
+                    </a></li>
+            </div>
+
+            <li class="itemNav" id="reglog"><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+            <li class="itemNav" id="perfil"><a href="perfilUsuario.html">Perfil</a></li>
+        </ul>
+        </nav>
+
+    </header>
+    <form  method="post" >
+        <div class="insertContainer">
+          <div class="peter">
+            <h1 class="tituloLoginRegister">Insertar Películas</h1>
+        </div>
+        
+          <label for="uname"><b>Titulo Pelicula</b></label>
+          <input type="text" placeholder="Usuario" name="titulo" id="titulo"required>
+      
+          <label for="psw"><b>Sinopsis</b></label>
+          <input type="text" placeholder="Contraseña" name="sinopsis" id="sinopsis"required>
+          
+           <label for="psw"><b>Genero</b></label> 
+           <input type="text" placeholder="email" name="genero" id="genero"required> 
+
+           <label for="psw"><b>Actores</b></label> 
+           <input type="text" placeholder="email" name="actor" id="actor"required> 
+           
+           <label for="psw"><b>Año de lanzamiento</b></label> 
+           <input type="text" placeholder="email" name="fecha" id="fecha"required> 
+          
+           <label for="psw"><b>Duración</b></label> 
+           <input type="text" placeholder="email" name="duracion" id="duracion"required> 
+
+           <label for="psw">Director<b></b></label> 
+           <input type="text" placeholder="email" name="director" id="director"required> 
+
+           <label for="psw">Productora<b></b></label> 
+           <input type="text" placeholder="email" name="productora" id="productora"required> 
+           <button type="button" class="logregbutton" onclick="registrarPeli()">Iniciar sesión</button>
+          <label>
+        </div>
+      </form> 
+</body>
+</html>
