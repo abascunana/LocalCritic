@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="myscripts.js"></script>
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul class="barraNav">
+                <div class="inicio">
+                    <!-- Logo -->
+                    <li class="itemNav"><a href="index.html">
+                            <img class="navlogo" src="imagenes/logo3.png">
+                        </a></li>
+                </div>
+                <li class="itemNav"><a href="sesion.html">Registrarse o Iniciar sesión</a></li>
+                <li class="itemNav"><a href="perfilUsuario.html">Perfil</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Juegos -->
+        <form class="insertContainer" action="http://localhost:8081/localCritic/registroCancion" method="post">
+
+            <div class="peter">
+                <h1 class="tituloLoginRegister">Insertar Canciones</h1>
+            </div>
+
+            <label for="titulo"><b>Nombre de Cancion</b></label>
+            <input type="text" placeholder="Canción" name="titulo" required>
+
+            <label for="artista"><b>Artista</b></label>
+            <input type="text" placeholder="Artista" name="artista" required>
+
+            <label for="productora"><b>Productora</b></label>
+            <input type="text" placeholder="Productora" name="productora" required>
+
+            <label for="genero"><b>Género</b></label>
+            <input type="text" placeholder="Género" name="genero" required>
+
+            <label for="fecha"><b>Año de lanzamiento</b></label>
+            <input type="text" placeholder="Año de lanzamiento" name="fecha" required>
+
+            <label for="duracion"><b>Duración</b></label>
+            <input type="text" placeholder="Duración" name="duracion" required>
+
+            <button type="submit" class="logregbutton">Insertar</button>
+            <label>
+        </form>
+
+    </main>
+</body>
+
+</html>

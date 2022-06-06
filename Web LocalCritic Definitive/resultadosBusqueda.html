@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="peli.js"></script>
+</head>
+
+<body onload="actualitzar()">
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul class="barraNav">
+                <div class="inicio">
+                    <!-- Logo -->
+                    <li class="itemNav"><a href="index.html">
+                            <img class="navlogo" src="imagenes/logo3.png">
+                        </a></li>
+                </div>
+                <li class="itemNav" id="sesion"><a href="sesion.html">Sesión</a></li>
+
+            </ul>
+            <div class="SearchBar">
+                <div id="selector" class="floatAboveEverything">
+                    <div class="listaResultados">
+                        <div id="wrapper" class="wrapper"></div>
+                        <ul id="loco">
+                            <!-- <div class="resultados" id="resultados">   -->
+                        </ul>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="backgroundContainerPerfil"></div>
+            <div class="padreada" id="usuaris"></div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footerContainers">
+            <div class="footerLogoPlusTitle">
+                <img class="footerLogo" src="imagenes/logo1.png">
+                <h1 class="footerTitle">LocalCritic</h1>
+            </div>
+
+            <div class="footerContent">
+                <p>LocalCritic es una página web orientada a la valoración y crítica de obras audiovisuales y
+                    literarias, donde se incluyen videojuegos, películas, libros y música.
+                    Desde el equipo de administración de LocalCritic os deseamos una agradable estancia.</p>
+
+                <a class="github" href="https://github.com/abascunana/LocalCritic">Haz clic aquí para acceder a nuestro
+                    GitHub</a>
+                <p>Página web creada por Antoni Xavier Bascuñana Sánchez, Xavier Borrás Mercant y Miguel Marcos Nazco
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="lista"></div>
+
+</body>
+
+</html>
