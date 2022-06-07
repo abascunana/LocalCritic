@@ -27,7 +27,7 @@ Se divide en:
 * **Insertar obras** (`InsertarObra.html`): Esta página únicamente está disponible como administrador y consiste en una sección con cuatro opciones (`RegistroPelicula.html`, `RegistroJuegos.html`, `RegistroLibro.html` y `RegistroCancion.html`, las cuales también están habilitadas únicamente para administradores al clicar encima de alguna de las opciones se redirige a una página para insertar nuevas obras del tipo de obra que hayas escogido antes en las cuatro opciones. 
 Estas últimas cuatro páginas consisten en un formulario con diferentes campos, *dependiendo del tipo de obra escogido*, y un botón *submit* que permite que se conecte con el servidor Tomcat y se inserte dentro de la base de datos en la tabla del tipo de obra correspondiente y en la tabla de obras general, donde disponen de una id diferente para evitar la duplicación de id entre diferentes tipos de obras.
 
-* **Resultados de la Búsqueda** (`resultadosBusqueda.html`): Al buscar una obra en la *search-box* en cualquier sección de la página se redirige a esta, donde se muestran unos resultados u otros dependiendo de qué se haya buscado:
+* **Resultados de la Búsqueda** (`VerObras.html`): Al buscar una obra en la *search-box* en cualquier sección de la página se redirige a esta, donde se muestran unos resultados u otros dependiendo de qué se haya buscado:
 Si se ha buscado un nombre similar de la obra, *pero no completo*, aparecerá la ficha técnica (donde se incluye la información correspondiente de cada tipo de obra) de todas las obras que tengan un nombre similar.
 En cambio, si se ha buscado el nombre exacto de la obra aparecerá también la ficha técnica y todas sus críticas,* si dispone de ellos*.
 
