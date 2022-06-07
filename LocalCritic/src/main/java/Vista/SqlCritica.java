@@ -256,7 +256,7 @@ public class SqlCritica extends Conexion{
 		 PreparedStatement ps = null;
 		    Connection pepe = Conexion.getConexion();
 		    ResultSet rs = null;
-		    String sql = "Select sum(valCritica)/(select count(*) from criticas where obraID ="+obraid+")from criticas where UsuarioID = ?";
+		    String sql = "Select sum(valCritica)/(select count(*) from criticas where UsuarioID ="+UsuarioID+")from criticas where UsuarioID = ?";
 
 		    try {
 		        ps = pepe.prepareStatement(sql);

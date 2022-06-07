@@ -1,22 +1,22 @@
+//Función que se ejecuta al entrar en la página
 function actualitzar(){
     textoPelis();
     lista();
     PredecirResultado()   
     ConseguirTitulo()
-
     }
-
+//Función que se ejecuta al entrar en VerObras.html
 function actualitzarObras(){
     actualitzar()
     cercarConLike()
 }
+//Función que se ejecuta al ir al perfil
 function actualitzarPerfil(){
     actualitzar()
     Perfil()
 }
 
-
-//Funció que sol·licita el select amb les opcions de paisos disponibles a la BBDD
+//Función que genera la barra de búsqueda
 function textoPelis(){
     var peliHttp;
     peliHttp = new XMLHttpRequest;
@@ -32,7 +32,7 @@ function textoPelis(){
     
 }
 
-//Funció per sol·licitar la llista d'usuaris filtrat per l'opció triada al select
+//Función que busca la obra buscada y redirige a la página
 function cercar(){
     localStorage.setItem("peli",document.getElementById("llistat").value)
     var http;
@@ -59,10 +59,12 @@ function cercarConLike(){
     http.open("GET","http://localhost:8080/LocalCritic/peli2?titulo="+localStorage.getItem("peli"),true);
     http.send();
 }
+//Crea un arrayList mediante un String
 function dividirCadena(cadenaADividir,separador) {
     let arrayDeCadenas = cadenaADividir.split(separador);
     return arrayDeCadenas;
  }
+ //Recoge una lista con todas las obras de la base de datos
  function lista(){
     var http;
     http = new XMLHttpRequest;
@@ -77,6 +79,7 @@ function dividirCadena(cadenaADividir,separador) {
     http.send();
     return(lalista);
 }
+//Predice los posibles resultados al buscar una obra
 function PredecirResultado(){
     const buscarInput = document.getElementById ('llistat');
     buscarInput.addEventListener('keyup',()=>{
@@ -92,6 +95,7 @@ function PredecirResultado(){
             
         });
 }
+//Escribe los posibles resultados debajo de la barra de búsqueda
 function conseguirResultados(resultados){
     var aEnviar = "";
     for(let i = 0;i<resultados.length;i++){
@@ -103,16 +107,18 @@ function conseguirResultados(resultados){
     }
    document.getElementById('loco').innerHTML = aEnviar;
     }
-    function tituloyusuario(){
-        var titulo = localStorage.getItem("peli");
-        var usuario = localStorage.getItem("usernamerg")
-        document.getElementById("nombreusuario1").innerHTML='<input type="text" name="nombreusuario" id="nombreusuario" value="'+usuario+'">' 
-        document.getElementById("titulo1").innerHTML='<input type="text" name="titulo" id="titulo" value="'+titulo+'">'  
+//En el formulario de añadir una crítica, autocompleta la obra a críticar y el usuario
+function tituloyusuario(){
+    var titulo = localStorage.getItem("peli");
+    var usuario = localStorage.getItem("usernamerg")
+    document.getElementById("nombreusuario1").innerHTML='<input type="text" name="nombreusuario" id="nombreusuario" value="'+usuario+'">' 
+    document.getElementById("titulo1").innerHTML='<input type="text" name="titulo" id="titulo" value="'+titulo+'">'  
     }
-    function ConseguirTitulo2(id){
-        if(localStorage.getItem("usernamerg")!= "null"){
-        var http;
-        http = new XMLHttpRequest;
+//Redirige al formulario de hacer crítica
+function ConseguirTitulo2(id){
+    if(localStorage.getItem("usernamerg")!= "null"){
+    var http;
+    http = new XMLHttpRequest;
         var resultado = null;
         http.onreadystatechange = function (){
             if (http.readyState==4 && http.status==200){
@@ -128,6 +134,7 @@ function conseguirResultados(resultados){
         alert("Debes estar registrado")
     }
 }
+//Dar upvote
     function Upvotes(id){
         var http;
         http = new XMLHttpRequest;
@@ -140,6 +147,7 @@ function conseguirResultados(resultados){
         prueba = http.responseText;
         http.send();
     }
+//Dar downvote    
     function Downvotes(id){
         var http;
         http = new XMLHttpRequest;
@@ -152,6 +160,7 @@ function conseguirResultados(resultados){
         prueba = http.responseText;
         http.send();
     }
+//Refresca la página al dar like en obra
     function UpvoteRefresh(id){
         if(localStorage.getItem("usernamerg") != "null"){
             Upvotes(id);
@@ -160,7 +169,7 @@ function conseguirResultados(resultados){
             alert("Debes haber iniciado sesión")
             }
         }
-    
+//Refresca la página al dar dislike en obra    
     function DownvoteRefresh(id){
         if(localStorage.getItem("usernamerg") != "null"){
         Downvotes(id);
@@ -169,6 +178,7 @@ function conseguirResultados(resultados){
         alert("Debes haber iniciado sesión")
         }
     }
+//Refresca la página al dar like en perfil
     function UpvotePerfil(id){
         if(localStorage.getItem("usernamerg") != "null"){
             Upvotes(id)
@@ -177,6 +187,7 @@ function conseguirResultados(resultados){
             alert("Debes haber iniciado sesión")
             }
     }
+//Refresca la página al dar dislike en obra    
     function DownvotePerfil(id){
         if(localStorage.getItem("usernamerg") != "null"){
         Downvotes(id)
@@ -185,6 +196,7 @@ function conseguirResultados(resultados){
             alert("Debes haber iniciado sesión")
         }
     }
+//Genera el perfil del usuario
     function Perfil(){
         var http;
         var usuario = localStorage.getItem("usernamerg");
@@ -198,6 +210,7 @@ function conseguirResultados(resultados){
         http.open("GET","http://localhost:8080/LocalCritic/perfil?usuario="+usuario,true);
         http.send();
     }
+//Registra al usuario
     function registrar() {
         var http;
         http = new XMLHttpRequest;
@@ -205,12 +218,13 @@ function conseguirResultados(resultados){
             if (http.readyState==4 && http.status==200){
             }
         }
-        http.open("POST","http://localhost:8080/LocalCritic/registroUsuario?username="+document.getElementById("username").value+"&&password="+document.getElementById("password1").value+"&&email="+document.getElementById("email1").value+"&&tipoUsuario="+document.getElementById("tipoUsuario1").value,true)
+        http.open("POST","http://localhost:8080/LocalCritic/registroUsuario?username="+document.getElementById("username1").value+"&&password="+document.getElementById("password1").value+"&&email="+document.getElementById("email1").value+"&&tipoUsuario="+document.getElementById("tipoUsuario1").value,true)
         http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         http.send();
         window.location.href = "index.html"; 
     
       }
+//Registra una peli
       function registrarPeli() {
         var http;
         http = new XMLHttpRequest;
@@ -223,6 +237,7 @@ function conseguirResultados(resultados){
         http.send();
         window.location.href = "index.html"; 
       }
+//Registra una crítica
     function Critica() {
         var http;
         http = new XMLHttpRequest;
@@ -234,6 +249,7 @@ function conseguirResultados(resultados){
         http.send();
         window.location.href = "index.html"; 
       }
+//Realiza el login
     function enviar (){
         var http;
         http = new XMLHttpRequest;
@@ -256,7 +272,7 @@ function conseguirResultados(resultados){
         http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         http.send("username="+document.getElementById("username").value+"&&password="+document.getElementById("password").value);       
     }
-    
+//Cambia la barra de arriba si estás registrado o no    
     function mostrarus (){
        
         var nombre = localStorage.getItem("usernamerg")
@@ -273,6 +289,7 @@ function conseguirResultados(resultados){
             document.getElementById("opciones3").innerHTML='<li><a href="InsertarObra.html">Insertar obras</a></li>'  
         }
     }
+//Actualiza la barra de arriba 
     function ConseguirTitulo(){
         var http;
         http = new XMLHttpRequest;
@@ -290,6 +307,7 @@ function conseguirResultados(resultados){
         } 
    
     }
+//Cierra la sesión 
     function Cerrarsesion(){
         localStorage.setItem("usernamerg",null)
         localStorage.setItem("tipousuario",null)
