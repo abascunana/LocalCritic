@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class BasesPelicula extends Conexion {
-	
+//Genera el HTML de las películas	
 public static String getSelectPelicula() throws SQLException, ClassNotFoundException {
 	Statement st = null;
 	ResultSet rs = null;

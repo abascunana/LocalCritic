@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class SqlPelicula extends Conexion {
 public boolean registrarPelicula(Pelicula peli){
-		
+		//Inserta una obra en la base de datos
 		PreparedStatement ps = null;
 		Connection pepe = getConexion();		
 		String sql = "INSERT INTO peliculas (tituloPelicula,sinopsisPelicula,generoPelicula,actor,anoLanzamientoPelicula,duracionPelicula,director,productoraPelicula,mediaValPelicula) VALUES(?,?,?,?,?,?,?,?,0)";
@@ -30,7 +30,7 @@ public boolean registrarPelicula(Pelicula peli){
 			return false;
 		}
 		
-			
+//Comprueba si existe la película en la base de datos
 		}
 public int existePelicula(String pelicula ) {
 	
@@ -56,7 +56,7 @@ public int existePelicula(String pelicula ) {
 	}
 }
 		
-	
+	//Busca el ID de una obra con su título
 public int BuscarID(Pelicula peli) throws SQLException {
 	PreparedStatement ps = null;
 	Connection pepe = getConexion();	
@@ -78,7 +78,7 @@ public int BuscarID(Pelicula peli) throws SQLException {
 		
 	
 }
-
+//Inserta una obra den la tabla Obras(antes se inserta en la respectiva tabla)
 public boolean InsertarEnObra(Pelicula peli) throws SQLException {
 
 	PreparedStatement ps = null;

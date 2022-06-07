@@ -1,5 +1,5 @@
 package Vista;
-
+//Clase con los atributos del Usuario
 public class Usuario {
 	private String nombreUsuario;
 	private String tipoUsuario;

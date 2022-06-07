@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class SqlUsuarios extends Conexion {
 	
 	public boolean registrar(Usuario usr){
-		
+		//Inserta un usuario en la base de datos
 		PreparedStatement ps = null;
 		Connection pepe = getConexion();		
 		String sql = "INSERT INTO usuarios (nombreUsuario,tipoUsuario,emailUsuario,contraseñaUsuario,karma,reviewNum,mediaValUsuario) VALUES(?,?,?,?,0,0,0)";
@@ -31,6 +31,7 @@ public class SqlUsuarios extends Conexion {
 		
 			
 		}
+	//Logea a un usuario en la base de datos
 	public boolean logearse(Usuario usr)throws ClassNotFoundException {
 		boolean status = false;
 		PreparedStatement ps = null;
@@ -56,6 +57,7 @@ public class SqlUsuarios extends Conexion {
         return status;
     }
 	}
+//Selecciona el tipo de usuario con su usuario
 public static String SelectTipoUsuario(String usuario ) {
 		
 		PreparedStatement ps = null;
@@ -82,7 +84,7 @@ public static String SelectTipoUsuario(String usuario ) {
 			
 		} 
 	
-
+//Comprueba si existe el usuario
 public int existeUsuario(String usuario ) {
 		
 		PreparedStatement ps = null;
@@ -108,14 +110,4 @@ public int existeUsuario(String usuario ) {
 		
 			
 		}
-	
-public boolean esEmail(String correo) {
-
-    Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+´)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-
-    Matcher mather = pattern.matcher(correo);
-    return mather.find();
-
-	}
-
 }

@@ -12,13 +12,7 @@ import jakarta.servlet.http.HttpSession;
 import Vista.Conexion;
 import Vista.Usuario;
 
-
-/**
- * LoginBeam = Usuario
- * LoginDao = Base
- * LoginServlet = LoginServlet;
- */
-
+//Realiza el login
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	public int success = 0;

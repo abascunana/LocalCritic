@@ -1,5 +1,5 @@
 package Vista;
-
+//Clase con los atributos de la crítica
 public class Critica {
 	private int valCritica;
 	private String textoCritica;

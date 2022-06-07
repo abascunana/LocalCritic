@@ -1,5 +1,5 @@
 package Vista;
-
+//Clase con los atributos de la Película
 public class Pelicula {
 	private String tituloPelicula;
 	private String sinopsisPelicula;

@@ -8,7 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+//Genera el perfil del usuario
 @WebServlet("/perfil")
 public class PerfilServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

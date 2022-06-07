@@ -8,7 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+//Actualiza los likes en la base de datos
 /**
  * Servlet implementation class DownvotesServlet
  */

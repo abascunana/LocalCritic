@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
+//Envía la lista de todas las obras para poder usar la barra de búsqueda progresiva
 @WebServlet("/lista")
 public class EnviarLista extends HttpServlet {
     private static final long serialVersionUID = 1L;

@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-
+//Crea una crítica en la base de datos
 @WebServlet("/critic")
 public class  Criticaservlet extends HttpServlet {
 	private SqlCritica criticaDao;

@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+//Servlet que crea la barra de búsqueda
 @WebServlet("/peli1")
 public class Buscarpeli extends HttpServlet {
 	private static final long serialVersionUID = 1L;

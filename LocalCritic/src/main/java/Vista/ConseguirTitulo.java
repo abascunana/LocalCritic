@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
+//Consigue el título de la obra recogiendo el ID de la misma
 @WebServlet("/ConseguirTitulo")
 public class ConseguirTitulo extends HttpServlet {
 	

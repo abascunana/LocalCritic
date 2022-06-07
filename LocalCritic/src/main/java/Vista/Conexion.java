@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-	//he añadido lo de allowPublicKeyRetrieval porque en mi caso me daba error sin, si molesta se quita
+//Conexión a la base de datos	
 	private final static String base = "localCritic";
 	private final static String user = "Main";
 	private final static String password = "Localcritic1";

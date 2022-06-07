@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class BasesUsuario extends Conexion{
-
+//Genera el HTML del perfil del usuario
 	public static String selectUsuario(String usuario) throws SQLException {
 		
 		PreparedStatement ps = null;

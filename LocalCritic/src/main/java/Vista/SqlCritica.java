@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class SqlCritica extends Conexion{
 	
 	public boolean registrarCritica(Critica cri){
-		
+		//Inserta la obra en la base de datos
 		PreparedStatement ps = null;
 		Connection pepe = getConexion();		
 		String sql = "INSERT INTO criticas (valCritica,textoCritica,upvotes,downvotes,usuarioID,obraID) VALUES(?,?,?,?,?,?)";
@@ -31,7 +31,7 @@ public class SqlCritica extends Conexion{
 			return false;
 		}
 		
-			
+		//Consigue el id de la obra
 		}
 	public static int BuscarID(String obra) throws SQLException {
 	    PreparedStatement ps = null;
@@ -52,7 +52,7 @@ public class SqlCritica extends Conexion{
 	    }
 	    return 0;
 
-
+	    //Consigue el nombre de la obra con su id
 	}
 	public static String conseguirNombre(int id){
 		PreparedStatement ps = null;
@@ -73,7 +73,7 @@ public class SqlCritica extends Conexion{
 	    }
 	    return "nada";
 
-
+	    //Consigue el usuario con su id 
 	}
 	public static String conseguirUsuario(int id) {
 		PreparedStatement ps = null;
@@ -94,7 +94,7 @@ public class SqlCritica extends Conexion{
 	    }
 	    return "nada";
 
-
+	    //Cosigue el id del usuario con el Nombre
 	}
 	public static int conseguirIdUsuario(String Nombre) {
 		PreparedStatement ps = null;
@@ -115,7 +115,7 @@ public class SqlCritica extends Conexion{
 	    }
 	    return 0;
 
-
+	    //Actualiza los upvotes en la base de datos
 	}
 	public static void calcularUpvotes(int id) throws SQLException {
 	    PreparedStatement ps = null;
@@ -130,7 +130,7 @@ public class SqlCritica extends Conexion{
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
-
+	  //Actualiza los downvotes en la base de datos
 	}
 	public static void calcularDownvotes(int id) throws SQLException {
 	    PreparedStatement ps = null;
@@ -146,7 +146,7 @@ public class SqlCritica extends Conexion{
 	        e.printStackTrace();
 	    }
 	    
-
+	    //Calcula la nota media de la obra
 	}
 	public static int calcularMediaObra(int id) {
 		PreparedStatement ps = null;
@@ -167,6 +167,7 @@ public class SqlCritica extends Conexion{
 		        e.printStackTrace();
 		        return 999;
 		    }
+	    //Actualiza la media de la obra
 	    }
 	public static void updateMedia(int nota,int peli) {
 		PreparedStatement ps = null;
@@ -181,7 +182,7 @@ public class SqlCritica extends Conexion{
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
-	   
+	   //Selecciona el número de críticas que tiene cada usuario
 	}
 	public static int numCriticas(int id) {
 		PreparedStatement ps = null;
@@ -202,6 +203,7 @@ public class SqlCritica extends Conexion{
 		        e.printStackTrace();
 		        return 999;
 		    }
+	    //Actualiza el número de críticas de un usuario
 	    }
 	public static void UpdateNumCriticas(int id,int criticas) {
 		PreparedStatement ps = null;
@@ -216,7 +218,7 @@ public class SqlCritica extends Conexion{
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
-	   
+	   //Calcula el Karma del usuario
 		}
 	public static int karma(int id) {
 		PreparedStatement ps = null;
@@ -237,6 +239,7 @@ public class SqlCritica extends Conexion{
 		        e.printStackTrace();
 		        return 999;
 		    }
+	    //Actualiza el karma del usuario
 	    }
 	public static void UpdateKarma(int id,int karma) {
 		PreparedStatement ps = null;
@@ -251,6 +254,7 @@ public class SqlCritica extends Conexion{
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
+	    //Calcula la media de valoración del usuario
 	}
 	 public static int MediaValUsuario(int obraid,int UsuarioID) {
 		 PreparedStatement ps = null;
@@ -271,6 +275,7 @@ public class SqlCritica extends Conexion{
 			        e.printStackTrace();
 			        return 999;
 			    }
+		    //Actualiza la media de valoración del usuario
 		}
 	 public static void UpdateMediaValUsuario(int id,int media) {
 			PreparedStatement ps = null;

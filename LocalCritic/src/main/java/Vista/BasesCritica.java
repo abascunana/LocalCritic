@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
+//Crea el HTML de las críticas
 public class BasesCritica extends Conexion{
 	
 	public static String selectCritica(String obra) throws SQLException {
