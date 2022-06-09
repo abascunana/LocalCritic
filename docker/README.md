@@ -1,4 +1,8 @@
-
+#Autores
+Xavier Borrás Mercant
+Miguel Marcos Nazco
+Antoni Xavier Bascuñana Sánchez
+#Instalación del proyecto
 1. docker-compose up -d
 2. acceder mediante un navegador web la url localhost:3306 (esto ayuda a la conexión en la base de datos)
 3. acceder mediante un navegador web la url localhost:8082 e introducir de usuario root y contraseña 1234
