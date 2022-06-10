@@ -1,0 +1,39 @@
+version: '3.3'
+services:
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        ports:
+            - "3307:3306"
+        volumes:
+            - ./guardado:/var/lib/mysql
+            - ./mysql-dump:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_DATABASE: LocalCritic
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: 1234
+            MYSQL_ROOT_PASSWORD: root
+    phpmyadmin:
+        depends_on: 
+            - db
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - "8082:80"
+        environment:
+            MYSQL_ROOT_PASSWORD: root 
+            PMA_HOST: db
+    tomcat:
+           image: tomcat:10.0
+           ports:
+               - "8080:8080"
+           volumes:
+               - ./LocalCritic.war:/usr/local/tomcat/webapps/LocalCritic.war
+           container_name: tomcat
+           environment:
+            MYSQL_DATABASE: LocalCritic
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: 1234
+            MYSQL_ROOT_PASSWORD: root
